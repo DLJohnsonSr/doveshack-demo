@@ -1,0 +1,295 @@
+@import "utility";
+@import "component-nav";
+@import "component-shopping-cart";
+@import "component-carousel";
+@import "checkout";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: $default-font-size;  
+    font-family: $text-font-family;
+    font-weight: $text-font-weight-normal;
+    padding-top: 3.4rem;
+    color: $light-color;
+}
+
+section {
+    padding-top: 4rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.neons {
+    text-align: center;
+     font-weight: bold;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+     color: #fff;
+   text-shadow: 0 0 5px #00fff2, 0 0 10px #00fff2, 0 0 15px #00fff2, 0 0 20px #00fff2, 0 0 25px #00fff2, 0 0 30px #00fff2, 0 0 35px #00fff2, 0 0 45px #00fff2;
+ }
+ 
+ to {
+    color: lightgray;
+   text-shadow: 0 0 10px #00fff2, 0 0 15px #00fff2, 0 0 20px #00fff2, 0 0 25px #00fff2, 0 0 30px #00fff2, 0 0 35px #00fff2, 0 0 40px #00fff2, 0 1 45px #00fff2;
+ }
+}
+
+#home {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background-color: $accent-color;
+    color: $secondary-color;
+
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        text-shadow: 0.1rem 0 white, 0 0.1rem white, -0.1rem 0 white, 0 -0.1rem white, 1rem 1rem 0.75rem Black;
+    }
+
+    .subtitle {
+        margin-top: 1rem;
+        font-family: $subheading-font-family;
+        font-style: normal;
+    }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#welcome {
+    padding-top: 0;
+    background-color: $accent-color;
+
+    .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        height: 101%;
+        z-index: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+
+        a {
+            text-decoration: none;
+        }
+
+        #ribilious {
+            text-align: center;
+            margin-top: 6rem;
+            text-shadow: 0.1rem 0 white, 0 0.1rem white, -0.1rem 0 white, 0 -0.1rem white, 1rem 1rem 0.75rem white;
+        }
+
+        #orderNowButton {
+            margin: 4rem auto 0 auto;
+            text-align: center;
+            padding: 0.8rem;
+            width: 10rem;
+            border: 0.1rem solid white;
+            background-color: $primary-color;
+            font-family: $subheading-font-family;
+        }
+        
+        #orderNowButton:hover {
+            background-color: $secondary-color;
+            box-shadow: 0.01rem 0.01rem 0.1rem gray;
+        }
+    }
+}
+
+#order {
+    background-color: $primary-color;
+    font-weight: $text-font-weight-bold;
+    padding-bottom: 4rem;
+    
+    h3 {
+        margin-bottom: 1.5rem;
+        text-shadow: 0.05rem 0 white, 0 0.05rem white, -0.05rem 0 white, 0 -0.05rem white;
+    }
+
+    .container{
+        justify-content: space-around;
+    }
+}
+
+#meats, #sides {
+    margin: 0 2rem;
+}
+
+#sides {
+    margin-top: 2rem;
+}
+
+.menu-row {
+    margin-top: 0.75rem;
+    border-bottom: 0.01rem solid rgba($color: $light-color, $alpha: 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    width: 80%;
+}
+
+.menu-price {
+    text-align: right;
+}
+
+
+#gallery {
+    background-color: $primary-color;
+    padding: 0;
+
+
+        img {
+            width: 96vw;
+            height: 15rem;
+            box-shadow: 0.01rem 0.01rem 0.1rem white
+        }
+}
+
+#staff {
+    text-align: center;
+    background-color: $light-color;
+    color: $dark-color;
+
+    h2, h5, h6 {
+        color: $primary-color;
+        text-shadow: 0.05rem 0 $dark-color, 0 0.05rem $dark-color, -0.05rem 0 $dark-color, 0 -0.05rem $dark-color;
+    }
+
+    #issac {
+
+        .img-border {
+            border: 0.01rem solid lightgray;
+            border-radius: 0.3rem;
+            width: 70%;
+            margin: 0 auto 0.5rem auto;
+            padding: 0.5rem; 
+        }
+
+        img {
+            width: 100%;
+            border-radius: 0.3rem;
+            box-shadow: 0.01rem 0.1rem 0.1rem rgb(75, 75, 75)
+        }
+    }
+
+    #bio {
+        padding: 2rem;
+    }
+}
+
+#about {
+    background-color: $accent-color;
+    padding-bottom: 1.5rem;
+
+    img {
+        padding-top: 0.25rem;
+    }
+
+    .about-headers {
+        margin-bottom: 2rem;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    h3 {
+        text-shadow: 0.05rem 0 white, 0 0.05rem white, -0.05rem 0 white, 0 -0.05rem white;
+        display: inline;
+    }
+
+    h6 {
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    #locations, #hours, #contact {
+        padding: 0 3rem;
+        width: 100%;
+
+        .about-row {
+            margin-top: 0.5rem;
+
+            img {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+        }
+    }
+
+    #hours {
+        padding-top: 4rem;
+
+        .about-row {
+            border-bottom: 0.01rem solid $primary-color;
+        }
+
+        .days {
+            display: inline-block;
+            width: 40%;
+            text-align: left;
+        }
+
+        .hours {
+            display: inline-block;
+            width: 57%;
+            text-align: right;
+        }
+    }
+
+    #contact {
+        padding-top: 4rem;
+
+        address {
+            font-style: normal;
+        }
+
+        #social {
+            margin-top: 1.1rem;
+
+            .social-icon {
+                display: inline-block;
+                margin-right: 1.5rem;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 0.25rem;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+@import "media-600-tablet";
+@import "media-900-desktop";
+@import "media-1200-xl-desktop";

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="checkoutBody">
+
+	<!-- HEADER SECTION -->
+	<header id="home">
+        <a href="/index.html">
+            <h1>DoveShack's Smoked BBQ</h1>
+            <div class="h4 subtitle">Taste the SMOKE; it ain't no JOKE!</div>            
+        </a>
+	</header>
+
+	<section>
+		
+		<h2 class="title">Order Summary</h2>
+
+		<div class="checkout-area">
+
+			<div id="orderItems"></div>
+			<div id="orderSubtotal" class="details-row">
+				<span>Subtotal: </span>
+				<span class="order-subtotal"></span>
+			</div>
+			<div id="orderTax" class="details-row">
+				<span>Tax: </span>
+				<span class="order-tax"></span>
+			</div>
+			<div id="orderTotal" class="details-row">
+				<span>Total: </span>
+				<span class="order-total"></span>
+			</div>
+			<div id="returnLink">
+				<a href="/index.html">Return to Order Page</a>
+			</div>
+			
+			<div class="details-row">
+				<div id="paypal-button-container"></div>	
+			</div>
+		</div>
+	</section>
+
+	<template id="detailRowTemplate">
+		<div class="details-row">
+			<span class="detail-name"></span>
+			<span class="detail-price"></span>
+		</div>
+	</template>
+
+	<footer>
+        <div>&copy; 2020 All Rights Reserved</div>
+    </footer>
+	
+	<script src="https://www.paypal.com/sdk/js?client-id=ARdxlTDlrUj9PPilZGyQMihnxqYnvlZu6sPsDZuD_FTlopgZt9aFuayR5dSnxCT5gCijjLevJtbuRKqP"> // Replace YOUR_SB_CLIENT_ID with your sandbox client ID
+	</script>
+
+    <!-- Add the checkout buttons, set up the order and approve the order -->
+	<script src="/js/checkout.js"></script>
+	
+</body>
+</html>

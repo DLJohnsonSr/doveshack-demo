@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Cormorant+Upright:wght@500&family=Roboto:ital,wght@0,300;0,700;1,300&family=Yeseva+One&display=swap');
+
+// COLORS
+$primary-color:#ff4800;
+$secondary-color: #852600;
+$accent-color: rgb(255, 174, 0);
+$light-color: #ffffff;
+$dark-color: #000000;
+// $neutral-color: rgb(255, 255, 255);
+
+//FONTS
+// font-family: 'Chelsea Market', 'Courier New', Courier, monospace;
+// font-family: 'Cormorant Upright', Arial, Helvetica, sans-serif;
+// font-family: 'Roboto', 'Times New Roman, Times, serif';
+// font-family: 'Yeseva One', 'Courier New', Courier, monospace;
+
+$default-font-size: 18px;
+
+$nav-link-font-family: 'Cormorant Upright', Arial, Helvetica, sans-serif;
+$nav-link-font-weight: 700;
+$nav-link-font-size: 1.4em;
+
+$heading-font-family: 'Yeseva One', 'Courier New', Courier, monospace;
+$subheading-font-family: 'Chelsea Market', 'Courier New', Courier, monospace;
+
+$text-font-family: 'Roboto', 'Times New Roman, Times, serif';
+$text-font-weight-light: 300;
+$text-font-weight-normal: 500;
+$text-font-weight-bold: 700;
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: $secondary-color;
+    font-family: $heading-font-family;
+    font-style: italic;
+    text-shadow: 0.05rem 0 white, 0 0.05rem white, -0.05rem 0 white, 0 -0.05rem white;
+}
+
+p {
+    line-height: 2em;
+}
+
+h1, .h1 {
+    font-size: 3em;
+}
+
+h2, .h2 {
+    font-size: 1.8em;
+}
+
+h3, .h3 {
+    font-size: 1.5em;
+}
+
+h4, .h4 {
+    font-size: 1.3em;
+}
+
+h5, .h5 {
+    font-size: 1.2em;
+}
+
+h6, .h6 {
+    font-size: 1em;
+}
+
+// SHADOWS & LAYERING EFFECTS
+
+$component-shadow: 0.01rem 0.05rem 1rem rgb(75, 75, 75);

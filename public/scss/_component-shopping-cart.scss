@@ -1,0 +1,248 @@
+.horizontal {
+    position: absolute;
+    width: 1.1rem;
+    height: 0.2rem;
+}
+
+.vertical {
+    position: absolute;
+    width: 0.2rem;
+    height: 1.1rem;
+}
+
+.quantity-plus, .quantity-minus{
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: white;
+    border: 0.1rem solid blue;
+    border-radius: 0.75rem;
+    box-shadow: 0.01rem 0.01rem 0.2rem white;
+}
+
+.quantity-plus:hover, .quantity-minus:hover, .quantity-plus:focus, .quantity-minus:focus {
+    background-color: lightblue;
+    box-shadow: 0.03rem 0.03rem 0.5rem white
+}
+
+.quantity-plus .horizontal, .quantity-minus .horizontal {
+    background-color: blue;
+    top: 42.5%;
+    left: 7%;
+}
+
+.quantity-plus .vertical {
+    background-color: blue;
+    left: 43%;
+    top: 7%;
+}
+
+.quantity-box {
+    width: 2.4rem;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+}
+
+.cart-display {
+    display: none;
+}
+
+#shoppingCart {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    // width: 21rem;
+    border-bottom-left-radius: 0.5rem;
+
+    .container {
+        flex: row nowrap; 
+        justify-content: space-between;
+    }
+
+    // CART
+    .cart {
+        margin: 0 0.5rem;
+
+        .cart-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .cart-text {
+            color: blue;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .cart-badge {
+            margin: 0 0.5rem;
+            width: 2.5rem;
+            height: 1.5rem;
+            background-color: blue;
+            border-radius: 0.75rem;
+            padding-top: 0.075rem;
+            text-align: center;
+        }
+
+        .cart-badge-number {
+            color: white;
+            font-weight: 700;
+            margin: auto;
+        }
+    }
+}
+
+.icon-area-bg {
+    background-color: lightblue;
+    box-shadow: 0.1rem 0.1rem 0.25rem black;
+}
+
+// ICON AREA
+#iconArea {
+    height: 3.4rem;
+    padding-top: 0.8rem;
+
+
+
+    // CLOSE
+    #close {
+        margin-left: 3rem;
+
+        .cross {
+            margin-top: -1.7rem;
+            display: inline-block;
+            border: 0;
+            position: relative;
+            width: 1.2rem;
+            height: 1.2rem;
+            transform: rotate(45deg);
+            background-color: transparent;
+
+            .horizontal {
+                background-color: rgba(0, 0, 255, 0.445);
+                top: 40%;
+                left: 5%;
+                box-shadow: 0.01rem 0.01rem 1rem gray, 0.01rem 0.01rem 1rem gray;
+            }
+
+            .vertical {
+                background-color: rgba(0, 0, 255, 0.445);
+                top: 5%;
+                left: 40%;
+                box-shadow: 0.01rem 0.01rem 1rem gray, 0.01rem 0.01rem 1rem gray;
+            }
+        }
+
+        .close-text {
+            margin-top: 0.5rem;
+            text-align: center;
+            color: rgba(0, 0, 255, 0.445);
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-shadow: 0.01rem 0.01rem 1rem gray, 0.01rem 0.01rem 1rem gray;
+        }
+    }
+}
+
+/* POINTER AREA */
+#spacer {
+    position: relative;
+    background-color: transparent;
+    height: 0.85rem;
+}
+
+.pointer {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.75rem solid white;
+    padding-top: 0.1rem;
+}
+
+// CART AREA
+#tableArea {
+    margin-right: 0.2rem;
+    padding: 0 0 0.1rem 0;
+    background-color: white;
+    border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.25rem black;
+
+    .header-body {
+        background-color: lightblue;
+        padding: 0.5rem;
+        border-radius: 0.2rem 0.2rem 0 0;
+        border-bottom: 0.05rem solid gray;
+        box-shadow: 0.01rem 0.01rem 0.2rem gray;
+    }
+
+    .header-text {
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .header-total {
+        text-align: right;
+    }
+
+    .body-row {
+        background-color: lightblue;
+        box-shadow: 0.01rem 0.01rem 0.25rem gray;
+        margin: 0.5rem;
+    }
+
+    .item-row, .quantity-row {
+        padding: 0.25rem;
+    }
+
+    .item-name {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .item-total {
+        text-align: right;
+    }
+
+    .item-price {
+        font-size: 0.9rem;
+        color: darkslategray;
+    }
+
+    #empty {
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+
+    /* CHECKOUT BUTTON */
+    #checkout {
+        margin: 0.5rem auto;
+        width: 8rem;       
+    }
+
+    .checkout-button {
+        padding: 0.5rem;
+        width: 100%;
+        background-color: lightblue;
+        color: blue;
+        font-weight: 700;
+        border: 0.1rem solid blue;
+        border-radius: 1rem;
+        box-shadow: 0.01rem 0.01rem 0.2rem gray;
+    }
+
+    .checkout-button:hover {
+        background-color: blue;
+        color: white;
+        border: 0.1rem solid lightblue;
+        box-shadow: 0.01rem 0.01rem 0.4rem gray;
+    }
+}

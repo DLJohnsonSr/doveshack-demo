@@ -1,0 +1,76 @@
+#checkoutBody {
+    background-image: none !important;
+    color: $dark-color !important;
+    padding: 0 !important;
+
+    h2 {
+        text-align: center;
+        color: $primary-color;
+        text-shadow: 0.05rem 0 $dark-color, 0 0.05rem $dark-color, -0.05rem 0 $dark-color, 0 -0.05rem $dark-color;
+    }
+
+    #home {
+        background-color: $accent-color;
+        padding-top: 1rem;
+
+        .subtitle {
+            display: none;
+        }
+    }
+}
+
+.checkout-area{
+    background-color: $light-color;
+    margin: 2rem;
+    min-height: 80vh;
+}
+
+#orderItems {
+    border-top: 0.1rem solid $secondary-color;
+}
+
+.details-row {
+    margin: 1rem 0;
+    display: flex;
+    flex: row nowrap;
+    justify-content: space-between;
+}
+
+#orderSubtotal {
+    border-top: 0.05rem solid $dark-color;
+    padding-top: 0.5rem;
+}
+
+#orderTotal {
+    border-top: 0.3rem double black;
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+#returnLink {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#paypal-button-container {
+    width: 100%;
+    margin: 2rem auto 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+    #checkoutBody {
+        
+        #home {
+            padding: 2rem;
+        }
+
+        header, footer {
+            width: 100%;
+        }
+
+        section {
+            width: 60%;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@media screen and (min-width: 900px){
+
+    header, nav, footer {
+        width: 80%;
+        margin: auto;
+    }
+    section {
+        padding: 4rem;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #home {
+        padding: 1rem 8rem;
+    }
+
+    #gallery {
+
+        .container-item {background-color: rgba($color: #000000, $alpha: 0.01);
+            width: 25%;
+        }
+    }
+
+    #staff {
+
+        #issac{
+            
+            .img-border {
+                margin: 0 auto 0.5rem auto;
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    #about {
+
+        .about-row {
+            margin: 0 auto;
+        }
+    }
+}

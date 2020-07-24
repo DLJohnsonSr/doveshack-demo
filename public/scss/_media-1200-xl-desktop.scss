@@ -1,0 +1,49 @@
+@media screen and (min-width: 1200px){
+    
+    #home {
+        background-color: transparent;
+        padding: 2rem 0 1rem 0;
+    }
+
+    #welcome {
+        padding-bottom: 1rem;
+    }
+
+    #order {
+        padding: 4rem;
+    }
+
+    #staff {
+
+        .container-item {
+            width: 50%;
+        }
+
+        #issac{
+            
+            .img-border {
+                margin: 0 auto 0.5rem auto;
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    #about {
+
+        .container {
+            justify-content: space-evenly;
+        }
+
+        .container-item {
+            max-width: 33%;
+        }
+
+        .about-row {
+            margin: 0 auto;
+        }
+
+        #locations, #hours, #contact {
+            padding: 0 1rem;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@media screen and (min-width: 600px){
+
+    body {
+        padding-top: 0;
+        background: url(/img/danny-gallegos-onTGVHxgRJA-unsplash.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+    section {
+        padding: 4rem;
+    }
+
+    #home {
+        padding: 4rem 4rem 1rem 4rem;
+    }
+
+    #welcome { 
+        padding: 0;
+        height: auto;
+    }
+
+    #order {
+        background-color: transparent;
+        position: relative;
+        padding: 4rem 2rem;
+            
+        .order-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba($color: #000000, $alpha: 0.9);
+        }
+    }
+
+    #meats, #sides {
+        padding: 0;
+    }
+    
+    #gallery {
+
+        .container-item {
+            background-color: rgba($color: #000000, $alpha: 0.01);
+            width: 50%;
+        }
+        
+        img {
+            width: 100%;
+            height: 15rem;
+        }
+        
+    }
+}

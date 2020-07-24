@@ -1,0 +1,320 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Welcome to DoveShack's Smoked BBQ - The best Texas style BBQ in Virginia</title>
+
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header id="home" class="">
+        
+        <!-- background overlay -->
+        <div class="home-overlay"></div>
+        <a href="/index.html">
+            <h1>DoveShack's Smoked BBQ</h1>
+            <div class="h4 subtitle">Taste the SMOKE; it ain't no JOKE!</div>            
+        </a>
+    </header>
+
+    <!-- NAVBAR SECTION-->
+	<nav id="navbar">
+		<div id="navbar-menu">
+			<div id="navbar-icon">
+				<div class="burger"></div>
+				<div class="burger"></div>
+				<div class="burger"></div>
+			</div>
+			<!-- <img src="/public/img/skill-icons/javascript.webp" alt="Brand Logo" class="img-brand"> -->
+		</div>
+		<ul id="navbar-list" class="menu-display">
+			<li><a href="#home" class="nav-link">Home</a></li>
+			<li><a href="#order" class="nav-link neons">Order Now!</a></li>
+			<li><a href="#gallery" class="nav-link">Gallery</a></li>
+			<li><a href="#staff" class="nav-link">The Chef</a></li>
+			<li><a href="#about" class="nav-link">About</a></li>			
+		</ul>
+    </nav>
+
+    <!-- SHOPPING CART SECTION-->
+    <div id="shoppingCart">
+
+        <!-- Icon area -->
+        <div id="iconArea" class="container">
+            <div id="close" class="cart-display">
+                <button class="cross">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </button>
+                <span class="close-text">CLOSE</span>
+            </div>
+            <div class="cart container">
+                <img class="cart-icon" src="/img/icons/ic_shopping_cart_48px.svg" alt="Shopping Cart">
+                <div class="cart-text">Cart</div>
+                <div class="cart-badge">
+                    <div class="cart-badge-number">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pointer area -->
+        <div id="spacer" class="cart-display">
+            <div class="pointer"></div>
+        </div>
+
+        <!-- Cart area -->
+        <div id="tableArea" class="cart-display">
+
+            <div class="header-body container">
+                <div class="cart container">
+                    <img class="cart-icon" src="/img/icons/ic_shopping_cart_48px.svg" alt="Shopping Cart">
+                    <div class="cart-text">Cart</div>
+                    <div class="cart-badge">
+                        <div class="cart-badge-number">0</div>
+                    </div>
+                </div>
+                <div class="header-text">
+                    <span class="header-label">Total: $</span>
+                    <span id="total" class="header-total">0</span>
+                </div>
+            </div>
+
+            <div id="itemsBody"></div>
+
+            <template id="bodyRowTemplate" >
+                <div class="body-row">
+                    <div class="item-row container">
+                        <span class="item-name"></span>
+                        <span class="item-total"></span>
+                    </div>
+                    <div class="quantity-row container">
+                        <span class="item-price"></span>
+                        <button class="quantity-plus">
+                            <div class="horizontal"></div>
+                            <div class="vertical"></div>
+                        </button>
+                        <input class="quantity-box" type="text">
+                        <button class="quantity-minus">
+                            <div class="horizontal"></div>
+                        </button>
+                        <span class="remove">
+                            <a href="#">remove</a>
+                        </span>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Empty Cart-->
+            <div id="empty">
+                <a href="#order">Empty Cart</a>
+            </div>
+            
+            <!-- Checkout buttom -->
+            <div id="checkout">
+                <a href="/checkout.html"><button class="checkout-button">Checkout</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOME SECTION -->
+    <section id="welcome">
+
+        <!-- CAROUSEL -->
+        <div id="carousel">
+
+            <div class="carousel-overlay">
+                <div id="ribilious" class="h1">Rib-ilious!</div>
+                <a href="/#order">
+                    <div id="orderNowButton">
+                        <div class="neons">ORDER NOW!</div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- images -->
+            <div class="slides fade">
+                <img class="carousel-img" src="/img/dinner.jpg">
+            </div>
+            <div class="slides fade">
+                <img class="carousel-img" src="/img/brisket.jpg">
+            </div>
+            <div class="slides fade">
+                <img class="carousel-img" src="/img/chicken.jpg">
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div id="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- OREDER SECTION -->
+    <section id="order">
+
+        <div class="order-overlay"></div>
+
+        <h2 class="section-title">Order</h2>
+        
+        <div id="menu">    
+            <div id="meats">
+                <h3>Meats</h3>
+            </div>
+            <div id="sides">
+                <h3>Sides</h3>
+            </div>
+        </div>
+
+        <!-- MENU ITEN TEMPLATE -->
+        <template id="menuRowTemplate">
+            <div class="menu-row container">
+                <button class="quantity-plus">
+                    <img src="/img/icons/ic_add_shopping_cart_24px.svg" alt="Add To Cart">
+                </button>
+                <div class="menu-item"></div>
+                <div class="menu-price"></div>
+            </div>
+        </template>
+    </section>
+
+    <!-- GALLARY SECTION -->
+    <section id="gallery">
+
+        <div class="container">
+
+            <div class="container-item">
+                <img src="/img/boy_eating.jpg" alt="Boy Eating">
+            </div>
+            <div class="container-item">
+                <img src="/img/happy_people.jpg" alt="Happy Customers">
+            </div>
+            <div class="container-item">
+                <img src="/img/family_eating.jpg" alt="Familiy Eating">
+            </div>
+            <div class="container-item">
+                <img src="/img/cooks.jpg" alt="Happy Cooks">
+            </div>
+        </div>
+    </section>
+
+    <!-- STAFF SECTION -->
+    <section id="staff">
+        <h2 class="section-title">The Chef</h2>
+        <div class="container">
+            <div id="issac" class="container-item">
+                <div class="img-border">
+                    <img src="/img/issac_dove.jpg" alt="Issac Dove">                    
+                </div>
+                <h5>Issac R. Dove</h5>
+                <h6>Owner</h6>
+            </div>
+            <div id=bio class="container-item">
+                <p>The best Texas style BBQ in Virginia. If you want the best tasting BBQ hands down, come to DoveShack's Smoked BBQ. "Taste the SMOKE; it ain't no JOKE!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <div id="locations" class="container-item">
+                <div class="about-headers">
+                    <img src="/img/icons/ic_airport_shuttle_48px.svg" alt="Truck Locations">
+                    <h3>Locations</h3>
+                </div>
+                <div class="about-row"><img src="/img/icons/ic_location_on_24px.svg" alt="Location #1">123 Main St. Somewhere, US</div>
+                <div class="about-row"><img src="/img/icons/ic_location_on_24px.svg" alt="Location #2"> 123 Main St. Somewhere, US</div>
+            </div>
+            <div id="hours" class="container-item">
+                <div class="about-headers">
+                    <img src="/img/icons/ic_timer_48px.svg" alt="Hours of Operation">
+                    <h3>Grilling Times</h3>
+                </div>
+                <div class="about-row">
+                    <span class="days">Monday</span>
+                    <span class="hours">Closed</span>
+                </div>
+                <div class="about-row">
+                    <span class="days">Tuesday</span>
+                    <span class="hours">Closed</span>
+                </div>
+                <div class="about-row">
+                    <span class="days">Wednesday</span>
+                    <span class="hours">Closed</span>
+                </div>
+                <div class="about-row">
+                    <span class="days">Thursday</span>
+                    <span class="hours">12pm - 8pm</span>
+                </div>
+                <div class="about-row">
+                    <span class="days">Friday</span>
+                    <span class="hours">12pm - 8pm</span>
+                </div>
+                <div class="about-row">
+                    <span class="days">Saturday</span>
+                    <span class="hours">12pm - 8pm</span>
+                </div>
+                <div class="about-row">
+                    <span class="days">Sunday</span>
+                    <span class="hours">12pm - 8pm</span>
+                </div>
+            </div>
+            <div id="contact" class="container-item">
+                <div class="about-headers">
+                    <img src="/img/icons/ic_business_center_48px.svg" alt="Contact Info">
+                    <h3>Contact Us</h3>
+                </div>
+                <address class="contact">
+                    <div class="about-row" class="contact-icon">
+                        <img src="/img/icons/ic_business_24px.svg" alt="Our Address">
+                        <span>123 Main St. Somewhere, US</span>
+                    </div>
+                    <div class="about-row">
+                        <img src="/img/icons/ic_call_24px.svg" alt="Our Phone Number">
+                        <span>Catering: (555) 555-5555</span>
+                    </div>
+                    <div class="about-row"><img src="/img/icons/ic_email_24px.svg" alt="Our Email">
+                        <span>us@email.com</span>
+                    </div>
+                </address>
+                <div id="social" class="social-media">
+                    <img class="social-icon" src="/img/icons/facebook-square-brands.svg" alt="Facebook Icon">
+                    <img class="social-icon" src="/img/icons/instagram-brands.svg" alt="Instagram Icon">
+                    <img class="social-icon" src="/img/icons/twitter-square-brands.svg" alt="Twitter Icon">
+                </div>
+            </div>
+        </div>
+        
+        <h6>Veteran Owned</h6>
+    </section>
+
+    <footer>
+        <div>&copy; 2020 All Rights Reserved</div>
+    </footer>
+
+    <script src="/js/components.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/cart.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+</body>
+</html>

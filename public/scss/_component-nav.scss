@@ -1,0 +1,121 @@
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+
+    #navbar-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3.5rem;
+        background-color: $primary-color;
+        box-shadow: $component-shadow;
+        border-bottom: 0.01rem solid $accent-color;    
+
+        #navbar-icon {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3rem;
+            margin-top: 0.13rem;
+            
+            .burger {
+                width: 3rem;
+                height: 0.5rem;
+                margin: 0.45rem 0.5rem;
+                background-color: $secondary-color;
+                border-radius: 0.3rem;
+            }
+        }
+
+        .icon-spin {
+            transform: rotate(90deg);
+        }
+
+        .img-brand {
+            display: inline-block;
+            height: 2.5rem;
+            width: 2.5rem;
+            margin: 0 auto;
+        }
+    }
+
+    #navbar-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: $primary-color;
+        box-shadow: $component-shadow;
+        width: 16rem;
+
+        li a {
+            display: block;
+            margin: 0;
+            padding: 1rem 0;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            font-family: $nav-link-font-family;
+            font-weight: $nav-link-font-weight;
+            font-size: $nav-link-font-size;
+            border-bottom: 0.01rem solid $accent-color;
+        }
+
+        li a:hover {
+            background-color: $secondary-color;
+            text-shadow: 0.01rem 0.01rem 1rem $accent-color;
+        }
+
+        li a:focus {
+            background-color: $secondary-color;
+            text-shadow: 0.01rem 0.01rem 1rem white;
+        }
+    }
+
+    .menu-display {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px){
+
+    nav {
+        position: sticky;
+        display: flex;
+        justify-content: center;
+        background-color: $primary-color;
+        height: 3.5rem;
+        box-shadow: $component-shadow;
+        border-bottom: 0.01rem solid $accent-color;
+
+        #navbar-menu {
+            display: none;
+        }
+
+        #navbar-list {
+            display: contents;
+
+            li {
+                display: inline-block;
+
+                a {
+                    display: block;
+                    margin: 0 1.5rem;
+                    border: none
+                }
+            }
+
+            li a:hover {
+                background-color: transparent;
+            }
+
+            li a:focus {
+                background-color: transparent;
+            }
+        }
+    }
+}

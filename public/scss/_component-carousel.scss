@@ -1,0 +1,87 @@
+#carousel {
+    width: 100%;
+    position: relative;
+    margin: auto;
+
+    .slides {
+        display: none;
+    }
+
+    .carousel-img {
+        width: 100%;
+        max-height: 60vh;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -1.5rem;
+        padding: 1rem;
+        color: white;
+        font-weight: bold;
+        font-size: $default-font-size;
+        transition: 0.6s ease;
+        border-radius: 0 0.2rem 0.2rem 0;
+        user-select: none;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .next {
+        right: 0;
+        border-radius: 0.2rem 0 0 0.2rem;
+    }
+
+    #dots {
+        text-align: center;
+        margin-top: -1.5rem;
+
+        .dot {
+            cursor: pointer;
+            height: 0.9rem;
+            width: 0.9rem;
+            margin: 0 0.1rem;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+    
+        .active, .dot:hover {
+            background-color: darkslategray;
+        }
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+
+    #carousel {
+        width: 60vw;
+
+        .carousel-img {
+            box-shadow: $component-shadow, 0.05rem 0.05rem white, -0.05rem -0.05rem white;
+        }
+    }
+
+}
